@@ -1,0 +1,193 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo del header */
+
+h1{
+    margin: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    background-color: rgb(236, 215, 122);
+}
+
+header nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+/* estilo del main */
+
+
+/* tamaño SVG */
+svg{
+    width: 30px;
+    height: 30px;
+    color: yellow;
+}
+
+/* Flecha */
+
+.flecha{
+    text-align: center;
+}
+
+
+.contenedor-contactos{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 120px; 
+    margin-bottom: 150px;
+}
+
+.contenedor-contactos h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.contenedor-contactos p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contenedor-contactos a{
+    font-size: 15px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: black;
+}
+
+.contenedor-contactos form .campo, textarea{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+.contenedor-contactos form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+
+.contenedor-contactos .btn-enviar{
+    padding: 13px;
+    font-size: 16px;
+    color: rgb(69, 66, 66);
+    font-weight: bolder;
+    border: none;
+    background-color: yellow;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+/* estilos del catalogo */
+
+.Catalogo{
+    text-align: center;
+    margin-top: 7rem;
+    font-size: 40px;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 7rem; }
+  
+  .contenedor-item {
+    border-radius: 10px; }
+  
+  .contenedor-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  
+  .contenedor-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s; }
+  
+  .contenedor-item figure {
+    overflow: hidden; }
+  
+  .contenedor-item:hover img {
+    transform: scale(1.2); }
+  
+  .info-product {
+    font-size: 1rem;
+    padding: 10px 10px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+  
+  .precio {
+    font-size: 1rem;
+    font-weight: 800; }
+  
+  .info-product button {
+    border: none;
+    background: none;
+    background-color: #053f33;
+    color: whitesmoke;
+    padding: 15px 10px;
+    cursor: pointer; }
+  
+  .info-product button:hover {
+    background-color: cadetblue; }
+  
+
+/* estilo carrusel */
+
+.carousel-inner{
+    height: 750px;
+    width: 10px;
+    padding: 35px;
+    margin-bottom: 7rem;
+}
+
+/* estilo del footer */
+
+footer{
+    text-align: center;
+    background-color: rgb(142, 158, 145);
+    padding: 10px;
+    
+}
