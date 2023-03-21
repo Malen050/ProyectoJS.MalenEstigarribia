@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- link Font Awesome -->
+    <script src="https://kit.fontawesome.com/437b245191.js" crossorigin="anonymous"></script>
+
     <!-- link css -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <!-- link JS-->
-    <script src="index.js"></script>
+    
 
 
     <title>Mi pagina con JS</title>
@@ -22,6 +24,8 @@
     
 
         <h1>JoyaStore</h1>
+
+        
 
       <nav> 
         <ul>
@@ -35,7 +39,10 @@
             </li>
 
             <li>
-              <a href="/pages/carrito.html">Carrito </a> 
+              <button id="boton-carrito">
+                <span id="contadorCarrito">0</span>
+                🛒
+              </button> 
             </li>
 
         </ul>
@@ -48,13 +55,13 @@
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/img/aros.png" class="d-block w-100" alt="...">
+                <img src="./img/aros.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="/img/collar-diamantes.png" class="d-block w-100" alt="...">
+                <img src="./img/collar-diamantes.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="/img/diam-1.png" class="d-block w-100" alt="...">
+                <img src="./img/diam-1.png" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -80,77 +87,41 @@
         <div class="cat">
         <h2 class="Catalogo">Catálogo</h2>
 
-        <div class="contenedor-productos animate__animated animate__bounce animate__zoomIn">
-          <div class="contenedor-item">
-          <figure>
-              <img src="https://images.unsplash.com/photo-1589207212797-cfd546dea0fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Anillo de oro">
-          </figure>
-          <div class="info-product">
-    <h2>Anillo de oro</h2>
-    <p class="precio">$1500</p>
-    <button>Añadir al carrito</button>
-          </div>
-      </div>
-
-      <div class="contenedor-item">
-          <figure>
-              <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1086&q=80" alt="Anillo de Flor">
-          </figure>
-          <div class="info-product">
-    <h2>Anillo de flor</h2>
-    <p class="precio">$900</p>
-    <button>Añadir al carrito</button>
-          </div>
-      </div>
-
-
-      <div class="contenedor-item">
-          <figure>
-              <img src="https://images.unsplash.com/photo-1547738238-5ddb16bef15f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Collar de diamantes">
-          </figure>
-          <div class="info-product">
-    <h2>Collar de diamantes</h2>
-    <p class="precio">$5000</p>
-    <button>Añadir al carrito</button>
-          </div>
-      </div>
-
-      <div class="contenedor-item">
-          <figure>
-              <img src="https://images.unsplash.com/photo-1597177586824-33bda0c29325?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Piedra amatista">
-          </figure>
-          <div class="info-product">
-    <h2>Piedra amatista</h2>
-    <p class="precio">$650</p>
-    <button>Añadir al carrito</button>
-          </div>
-      </div>
-
-      <div class="contenedor-item">
-          <figure>
-              <img src="https://images.unsplash.com/photo-1474169482634-9d0381a70510?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" alt="Corona">
-          </figure>
-          <div class="info-product">
-    <h2>Corona</h2>
-    <p class="precio">$10.000</p>
-    <button>Añadir al carrito</button>
+      
+        <div id="contenedor-productos">
+          
+            <!-- <div class="producto">
+              <img src=${producto.img} alt= "">
+              <h3>${producto.nombre}</h3>
+              <p class="precioProducto">Precio:$ ${producto.precio}</p>
+              <button id="agregar${producto.id}" class="boton-agregar">Agregar al carrito </i></button>
+            </div> -->
+          
         </div>
-      </div>
 
-      <div class="contenedor-item">
-          <figure>
-              <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Collar de piedra">
-          </figure>
-          <div class="info-product">
-    <h2>Collar piedra</h2> 
-    <p class="precio">$800</p>
-    <button>Añadir al carrito</button>
+
+        <div class="modal-contenedor">
+          <div class="modal-carrito">
+              <h3>Carrito</h3>
+              <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+              <div id="carrito-contenedor">
+                  <!-- <div class="productoEnCarrito">
+                      <p>Anillo de oro</p>
+                      <p>Precio: $1500</p>
+                      <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                  </div> -->
+              </div>
+              <p class="precioProducto">
+                Precio total: $<span id="precioTotal">0</span>
+              </p>
+              <button id="vaciar-carrito" class="boton-agregar">
+                Vaciar carrito
+              </button>
           </div>
       </div>
-  </div>
-</div>
 
-          <!-- insertar flecha animada que indeque hacia abajo en la seccion de contactos -->
+
+          <!-- insertar flecha -->
 
         <div class="flecha">
           <img src="img/flecha.png" alt="Flecha">
@@ -204,5 +175,12 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- link JS-->
+  
+    <script defer src="stock.js"></script>
+    <script defer src="modal.js"></script>
+    <script defer src="script.js"></script>
+   
 </body>
 </html>
